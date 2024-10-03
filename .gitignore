@@ -1,7 +1,12 @@
 # Database
 *.json
 *.js
+*.xml
+*.db*
 *.txt
+*.collection
+*.mblink
+*.log
 # Images
 *.jpg
 *.webp
