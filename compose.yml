@@ -1,23 +1,20 @@
 services:
   jellyfin:
-    image: linuxserver/jellyfin
+    image: lscr.io/linuxserver/jellyfin:latest
     container_name: jellyfin
-    user: uid:gid
-    network_mode: 'host'
-    volumes:
-      - /config:/config
-      - /path/to/cache:/cache
-      - type: bind
-        source: /path/to/media
-        target: /media
-      - type: bind
-        source: /path/to/media2
-        target: /media2
-        read_only: true
-    restart: 'unless-stopped'
-    # Optional - alternative address used for autodiscovery
     environment:
-      - JELLYFIN_PublishedServerUrl=http://example.com
-    # Optional - may be necessary for docker healthcheck to pass if running in host network mode
-    extra_hosts:
-      - 'host.docker.internal:host-gateway'
+      - PUID=1000 # Find with the "id" command
+      - PGID=1000 # Find with the "id" command
+      - TZ=America/Los_Angeles
+    volumes:
+      - ./config:/config
+      - ./cache:/cache
+      - /run/media/cp/4THDD01/Videos/Shows:/data/tvshows
+      - /run/media/cp/4THDD01/Videos/Movies:/data/movies
+    ports:
+      - 8096:8096
+    restart: 'unless-stopped'
+# Returns error /dev/dri/card0 not found. card1 and card2 are there
+#    devices:
+#      - /dev/dri/renderD128:/dev/dri/renderD128
+#      - /dev/dri/card0:/dev/dri/card0
