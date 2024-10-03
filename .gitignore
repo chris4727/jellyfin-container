@@ -1,0 +1,8 @@
+# Database
+*.json
+*.js
+*.txt
+# Images
+*.jpg
+*.webp
+*.png
