@@ -8,7 +8,6 @@ services:
       - TZ=America/Los_Angeles
     volumes:
       - ./config:/config
-      - ./cache:/cache
       - /run/media/cp/4THDD01/Media/Shows:/data/shows
       - /run/media/cp/4THDD01/Media/Shows-kids:/data/shows-kids
       - /run/media/cp/4THDD01/Media/Movies:/data/movies
