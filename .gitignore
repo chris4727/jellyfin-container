@@ -8,6 +8,7 @@
 *.mblink
 *.log
 *.srt
+*.nfo
 # Images
 *.jpg
 *.webp
