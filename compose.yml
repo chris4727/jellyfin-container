@@ -17,7 +17,7 @@ services:
       - /run/media/cp/4THDD01/Media/Music:/data/music
     ports:
       - 8096:8096
-    restart: 'unless-stopped'
+#    restart: 'unless-stopped'
 # Returns error /dev/dri/card0 not found. card1 and card2 are there
 #    devices:
 #      - /dev/dri/renderD128:/dev/dri/renderD128
