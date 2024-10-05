@@ -9,12 +9,12 @@ services:
       - JELLYFIN_PublishedServerUrl=${URL} #optional
     volumes:
       - ./config:/config
-      - /run/media/cp/4THDD01/Media/Shows:/data/shows
-      - /run/media/cp/4THDD01/Media/Shows-kids:/data/shows-kids
-      - /run/media/cp/4THDD01/Media/Movies:/data/movies
-      - /run/media/cp/4THDD01/Media/Movies-kids:/data/movies-kids
-      - /run/media/cp/4THDD01/Media/Movies-home:/data/movies-home
-      - /run/media/cp/4THDD01/Media/Music:/data/music
+      - ${MEDIA}/Media/Movies:/data/movies
+      - ${MEDIA}/Media/Movies-kids:/data/movies-kids
+      - ${MEDIA}/Media/Movies-home:/data/movies-home
+      - ${MEDIA}/Media/Shows:/data/shows
+      - ${MEDIA}/Media/Shows-kids:/data/shows-kids
+      - ${MEDIA}/Media/Music:/data/music
     ports:
       - 8096:8096
 #    restart: 'unless-stopped'
