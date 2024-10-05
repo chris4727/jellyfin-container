@@ -13,3 +13,5 @@
 *.jpg
 *.webp
 *.png
+# Container
+.env
