@@ -1,17 +1,2 @@
-# Database
-*.json
-*.js
-*.xml
-*.db*
-*.txt
-*.collection
-*.mblink
-*.log
-*.srt
-*.nfo
-# Images
-*.jpg
-*.webp
-*.png
-# Container
+config/
 .env
