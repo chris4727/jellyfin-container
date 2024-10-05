@@ -6,6 +6,7 @@ services:
       - PUID=1000 # Find with the "id" command
       - PGID=1000 # Find with the "id" command
       - TZ=America/Los_Angeles
+      - JELLYFIN_PublishedServerUrl=${URL} #optional
     volumes:
       - ./config:/config
       - /run/media/cp/4THDD01/Media/Shows:/data/shows
