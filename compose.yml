@@ -15,10 +15,8 @@ services:
       - ${MEDIA}/Media/Shows:/data/shows
       - ${MEDIA}/Media/Shows-kids:/data/shows-kids
       - ${MEDIA}/Media/Music:/data/music
+    devices:
+      - /dev/dri:/dev/dri
     ports:
       - 8096:8096
 #    restart: 'unless-stopped' 
-# Returns error /dev/dri/card0 not found. card1 and card2 are there
-#    devices:
-#      - /dev/dri/renderD128:/dev/dri/renderD128
-#      - /dev/dri/card0:/dev/dri/card0
