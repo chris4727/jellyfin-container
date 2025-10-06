@@ -6,16 +6,16 @@ This is my Jellyfin server using a docker container.
 
 1. Clone the repo to the local machine.
 1. `cd` into the /jellyfin-container directory
-1. Edit the `.env` file to contain the correct ip and media path
+1. Edit the `.env` file to contain the correct IP and media path
 1. Run `docker-compose up -d` to start
 
 # Admin
 
-## Shell access whilst the container is running:
+## Shell access while the container is running:
 
 `docker exec -it jellyfin /bin/bash`
 
-## To monitor the logs of the container in realtime:
+## To monitor the logs of the container in real time:
 
 `docker logs -f jellyfin`
 
@@ -26,6 +26,14 @@ This is my Jellyfin server using a docker container.
 ## Update containers:
 
 `docker-compose up -d`
+
+## Check installed images
+
+`docker images`
+
+## Remove images
+
+`docker rmi <image_id>`
 
 
 # Resources
