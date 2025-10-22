@@ -6,7 +6,7 @@ services:
       - PUID=1000 # Find with the "id" command
       - PGID=1000 # Find with the "id" command
       - TZ=${TZ}
-      - JELLYFIN_PublishedServerUrl=${URL} #optional
+      - JELLYFIN_PublishedServerUrl=http://${URL} #optional
     volumes:
       - ./config:/config
       - ${MEDIA_DIR}/Movies:/data/movies
@@ -20,5 +20,5 @@ services:
     devices:
       - /dev/dri:/dev/dri
     ports:
-      - 8096:8096
+      - '8096:8096'
     restart: no
