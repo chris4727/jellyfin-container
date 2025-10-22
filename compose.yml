@@ -15,6 +15,7 @@ services:
       - ${MEDIA_DIR}/Shows:/data/shows
       - ${MEDIA_DIR}/Shows-kids:/data/shows-kids
       - ${MEDIA_DIR}/Music:/data/music
+      - ${MEDIA_DIR}/Documentaries:/data/Documentaries
     env_file:
       - .env
     devices:
