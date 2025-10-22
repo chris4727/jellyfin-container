@@ -9,12 +9,12 @@ services:
       - JELLYFIN_PublishedServerUrl=${URL} #optional
     volumes:
       - ./config:/config
-      - ${MEDIA}/Movies:/data/movies
-      - ${MEDIA}/Movies-kids:/data/movies-kids
-      - ${MEDIA}/Movies-home:/data/movies-home
-      - ${MEDIA}/Shows:/data/shows
-      - ${MEDIA}/Shows-kids:/data/shows-kids
-      - ${MEDIA}/Music:/data/music
+      - ${MEDIA_DIR}/Movies:/data/movies
+      - ${MEDIA_DIR}/Movies-kids:/data/movies-kids
+      - ${MEDIA_DIR}/Movies-home:/data/movies-home
+      - ${MEDIA_DIR}/Shows:/data/shows
+      - ${MEDIA_DIR}/Shows-kids:/data/shows-kids
+      - ${MEDIA_DIR}/Music:/data/music
     devices:
       - /dev/dri:/dev/dri
     ports:
